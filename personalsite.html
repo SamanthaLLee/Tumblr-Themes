@@ -1,0 +1,370 @@
+<html>
+    <head>
+        <meta name="color:text" content="#000" />
+        <meta name="color:title" content="#000" />
+        <meta name="color:titlehover" content="#000" />
+        <meta name="color:sidebarcolor" content="#000" />
+        <meta name="color:backgroundcolor" content="#000" />
+        <meta name="color:hovercolor" content="#000" />
+        <meta name="color:highlight1" content="#000" />
+        <meta name="color:highlight2" content="#000" />
+        <meta name="color:bold" content="#000" />
+        <meta name="color:italic" content="#000" />
+        
+        <meta name="text:tabname" content="" />
+        
+        
+        <meta name="text:basics" content="" />
+        <meta name="text:tab1" content="" />
+        <meta name="text:tab2" content="" />
+        <meta name="text:tab3" content="" />
+        <meta name="text:tab4" content="" />
+        
+        <meta name="image:Favicon" content="http://media.tumblr.com/tumblr_m2jtuhuAmD1qdlkyg.gif" />
+    
+        <title>{Title}</title>
+        
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    
+   
+<style type="text/css">
+
+ body { 
+     
+     background-color:{color:backgroundcolor};     
+     font-family:Karla, Arial;
+     font-size: 11px;
+     
+ }
+
+h1 {
+ color:#fff;
+}
+
+
+a.class1 { 
+   text-decoration:none;
+   color:{color:text};
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+a.class1:hover{
+   color:{color:hovercolor};
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+a.class2 { 
+   text-decoration:none;
+   color:#fff;
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+a.class2:hover{
+    color:{color:sidebarcolor};
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+
+b, strong {
+   color:{color:bold};
+}
+
+i, em { 
+   color:{color:italic};
+}
+
+
+img {
+    max-width: 100%;
+}
+
+#firstbox
+{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position:fixed;
+    margin-left:55%;
+    margin-right:-100px;
+    margin-top:-680px;
+    height:700px;
+    width:500px;
+    background-color:{color:sidebarcolor};
+    text-align:center;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    z-index:-10;
+}
+
+#firstboxtext {
+    color:#fff;
+    position:relative;
+    margin-top:320px;
+    font-size:15px;
+    padding:10px;
+    }
+
+#firstbox:hover{
+    background-color:{color:highlight2};
+    margin-top:-4px;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+#basics{
+    text-align:left;
+    position:relative;
+    font-size:15px;
+    color:#000000;
+    padding:30px;
+    
+}
+
+#sidebar {
+   position:fixed;
+   left:0px;
+   top:0px;
+   height:175px;
+   width:100%;
+   background:{color:sidebarcolor};
+   z-index:0;
+}
+
+#title {
+   color:#fff;
+   text-shadow: 3px 3px 0px {color:highlight2}, 
+   -3px -3px 0px {color:highlight1};
+   text-decoration:none;
+   font-size:50px;
+   line-height:0px;
+   text-align:left;
+   margin-top:-5px;
+   padding:25px;
+   -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+#sidebar: hover #title {
+   color:#000;
+   text-shadow: 3px 3px 0px {color:highlight1}, 
+   -3px -3px 0px {color:highlight2};
+}
+
+
+#tab1
+{
+    position:fixed;
+    margin-top:250px;
+    margin-left:70px;
+    height:30px;
+    width:10px;
+    background-color:{color:highlight1};
+    text-align:center;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    z-index:9999;
+    overflow:hidden;
+}
+
+#tab1info
+{
+    font-size:15px;
+    color: #000;
+    padding:15px;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+   
+   
+}
+
+
+#tab1:hover
+{
+    width:550px;
+    height:400px;
+    color:#000;
+    background-color:#fff;
+     -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+}
+
+
+#tab2
+{
+    position:fixed;
+    margin-top:300px;
+    margin-left:70px;
+    height:30px;
+    width:10px;
+    background-color:#C4F6E9;
+    text-align:center;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    z-index:99;
+    overflow:hidden;
+}
+
+#tab2info
+{
+    font-size:15px;
+    color: #000;
+    padding:15px;
+
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+   
+}
+
+
+#tab2:hover
+{
+    width:550px;
+    height:300px;
+    color:#fff;
+    background-color:#fff;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+#tab3
+{
+    position:fixed;
+    margin-top:350px;
+    margin-left:70px;
+    height:30px;
+    width:10px;
+    background-color:#E1EDD5;
+    text-align:center;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    z-index:9;
+    overflow:hidden;
+}
+
+#tab3info
+{
+    font-size:15px;
+    color: #000;
+    padding:15px;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+}
+
+
+#tab3:hover
+{
+    width:550px;
+    height:200px;
+    color:#fff;
+    background-color:#fff;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+#tab4
+{
+    position:fixed;
+    margin-top:400px;
+    margin-left:70px;
+    height:30px;
+    width:10px;
+    background-color:{color:highlight2};
+    text-align:center;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    z-index:0;
+    overflow:hidden;
+}
+
+#tab4info
+{
+    font-size:15px;
+    color: #000;
+    padding:15px;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+   
+}
+
+
+#tab4:hover
+{
+    width:550px;
+    height:100px;
+    color:#fff;
+    background-color:#fff;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+
+
+iframe {display:none !important;}
+</style>
+   
+<body>
+
+
+
+<div id="sidebar">
+<div id="title"><a href="/" class="class2"><h1>samantha lee.</a></h1>
+</div>
+ 
+<div id="firstbox">
+ <div id="basics">
+{text:basics}
+</div>
+<div id="firstboxtext">
+{text:tabname}
+</div></div> 
+
+<div id="description">{description}</div>
+   
+</div>
+
+
+<div id="tab1">
+</div>
+
+<div id="tab2">
+<div id="tab2info">{text:tab2}</div></div>
+
+<div id="tab3">
+<div id="tab3info">{text:tab3}</div></div>
+
+<div id="tab4">
+<div id="tab4info">{text:tab4}</div></div>
+ 
+
+<div style="font-size: 10px; letter-spacing: 2px; float: left; position: fixed; bottom:5px; left:5px; z-index:9999999"><center>© 2018 by Samantha Lee<br></div> 
+
+
+</body>
+</html>
