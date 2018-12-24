@@ -1,0 +1,629 @@
+<!--
+ 
+theme by stellur // DO NOT REMOVE CREDIT
+base code by chraliecox
+ 
+-->
+ 
+<!DOCTYPE html>
+ 
+<head>
+ 
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<!--Default Variables-->
+ 
+<meta name="color:background" content="#ffffff"/>
+<meta name="color:sidebar" content="#0000"/>
+<meta name="color:text" content="#2b2b2b"/>
+<meta name="color:link" content="#2b2b2b"/>
+<meta name="color:side links" content="#2b2b2b"/>
+<meta name="color:link hover" content="#949494"/>
+<meta name="color:side link hover" content="#2b2b2b"/>
+<meta name="color:blockquote" content="#dadada"/>
+<meta name="color:bold" content="#0000"/>
+<meta name="color:selection" content="#00000"/>
+<meta name="color:highlight" content="#00000"/>
+ 
+<meta name="image:sidebar" content=""/>
+ 
+<meta name="text:link 1 URL" content="/" />
+<meta name="text:link 1" content="" />
+<meta name="text:link 1 hover" content="" />
+<meta name="text:link 2 URL" content="/" />
+<meta name="text:link 2" content="" />
+<meta name="text:link 2 hover" content="" />
+<meta name="text:link 3 URL" content="/" />
+<meta name="text:link 3" content="" />
+<meta name="text:link 3 hover" content="" />
+<meta name="text:link 4 URL" content="/" />
+<meta name="text:link 4" content="" />
+<meta name="text:link 4 hover" content="" />
+<meta name="text:link 5 URL" content="/" />
+<meta name="text:link 5" content="" />
+<meta name="text:link 5 hover" content="" />
+<meta name="text:updates" content="" />
+<meta name="text:tabtitle" content="" />
+
+<meta name="if:sidebar image" content=""/>
+ 
+<!--CSS customization here. -->
+ 
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+ 
+<style type="text/css">
+
+#s-m-t-tooltip{
+max-width:200px; 
+text-align:center;
+background-color:#ffffff;
+padding:5px 10px 5px 10px;
+font-size:11px;
+margin-top:20px;
+text-transform:none;
+border:{color:highlight} 1px solid; 
+position:absolute;
+letter-spacing:1px;
+z-index:999999;
+}
+ 
+/*basics*/
+ 
+blockquote {
+padding-left:12px;
+border-left:2px dotted {color:blockquote};
+margin-left:8px;
+}
+ 
+ul {
+list-style:none;
+text-align:left;
+padding-left:0;
+}
+ 
+li {
+position:relative;
+padding-left:30px;
+}
+ 
+ul li:before {
+position:absolute;
+left:15px;
+vertical-align:baseline!important;
+content:'›';
+}
+ 
+body {
+background:{color:background};
+color:{color:text};
+font-family:arial;
+font-size:11px;
+margin:0;
+text-align:justify;
+line-height:16px;
+}
+ 
+a {
+color:{color:link};
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+text-decoration:none;
+}
+ 
+a:hover {
+color:{color:link hover};
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+
+a.class2 { 
+   text-decoration:none;
+   color:{color:side links};
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+a.class2:hover{
+    color:{color:side link hover};
+    letter-spacing:2px;
+   -webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+}
+
+ 
+img {
+opacity:1;
+border:none;
+text-decoration:none;
+}
+ 
+small {
+font-size:11px;
+}
+ 
+big {
+font-size:11px;
+}
+
+b, strong, b a, strong a {
+    font-weight:bold!important;
+    color:{color:bold};
+}
+ 
+i {
+    font-style:italic;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:{color:highlight};
+    border:#fff solid 1px;
+}
+ 
+::-webkit-scrollbar {
+    background:{color:highlight};
+    border:4px solid #ffffff;
+    height:0px;
+    opacity:0;
+    width:6px;
+}
+ 
+::selection {
+    background:{color:selection};
+    color:{color:highlight};
+    text-shadow:{color:bold};
+}
+ 
+::-moz-selection {
+    background:{color:selection};
+    color:{color:highlight};
+    text-shadow:{color:bold};
+}
+ 
+
+/*sidebar*/
+ 
+#sidebar {
+text-align:left;
+position:fixed;
+margin-left:-280px;
+margin-top:96px;
+width:200px;
+/*background: rgba(255, 255, 255, 0.2);*/
+border:dotted 2px;
+padding:15px 10px 15px 10px;
+}
+
+{block:ifsidebarimage}
+#sidebar img {
+width:30px;
+border-radius: 50%;
+position:relative;
+margin-left:0px;
+margin-top:-75px;
+}
+
+#sidebar img:hover {
+opacity:0.7;
+transform: scale(.99);
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+{/block:ifsidebarimage}
+
+#sidebar .title {
+padding: 0px 0px 10px 0px;
+margin-bottom:10px;
+text-align: right;
+color: #000;
+font-size:25px;
+letter-spacing:2px;
+font-weight:bold;
+text-shadow: 2px 2px 0px {color:highlight};
+   
+}
+
+#sidebar .title a {
+color: #000;
+}
+
+#sidebar .title a:hover {
+color: #faf5fd;
+letter-spacing:5px;
+} 
+
+#tab
+{
+    position:fixed;
+    margin-top:10px;
+    margin-left:10px;
+    height:50px;
+    width:82px;
+    background-color:{color:highlight};
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    overflow:hidden;
+}
+
+#tabtitle
+{
+    font:15px 'Roboto', sans-serif;
+    color: #000;
+    padding:15px;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+}
+
+#tabinfo
+{
+font:12px;
+color: #000;
+padding:15px;
+text-align:left;    
+-webkit-transition:0.5s;
+-moz-transition:0.5s;
+-o-transition:0.5s;
+}
+
+#tab:hover
+{
+    width:180px;
+    height:400px;
+    background-color:{color:background};
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+}
+ 
+ 
+#links {
+font-size:12px;
+margin-top:10px;
+margin-bottom:10px;
+text-align:right;
+text-transform:lowercase;
+}
+ 
+#links a {
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+ 
+#description {
+margin-top:10px;
+text-align:right;
+}
+ 
+/*pagination*/
+ 
+#pagination {
+text-transform:lowercase;
+text-align:right;
+font-size:20px;
+margin-top:5px;
+}
+ 
+#pagination a {
+padding:0 3px;
+}
+ 
+/*container*/
+ 
+#con {
+left:50%;
+margin-left:-140px;
+position:absolute;
+}
+ 
+/*posts*/
+
+ 
+#entries {
+margin-top:85px;
+margin-bottom:70px;
+width:500px;
+padding:10px;
+}
+ 
+#posts {
+width:500px;
+padding:15px;
+background-color:#fff;
+{block:IndexPage}
+margin-bottom:25px;
+{/block:IndexPage}
+{block:PermalinkPage}
+margin-bottom:20px;
+{/block:PermalinkPage}
+}
+ 
+#posts img {
+max-width:500px;
+}
+ 
+#posts img, #posts li, #posts blockquote {
+max-width: 100%;
+}
+ 
+.caption {
+width:100%;
+margin-top:13px;
+margin-bottom:12px;
+}
+ 
+a.tumblr_blog {
+font-weight:bold;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+ 
+/*quote*/
+ 
+#titlequote {
+text-align:left;
+font-size:12px;
+line-height:17px;
+font-weight:bold;
+}
+ 
+#source {
+margin-top:0px;
+margin-bottom:11px;
+margin-left:0px;
+}
+ 
+/*asks*/
+ 
+.q {
+line-height:17px;
+font-size:11px;
+}
+ 
+.as {
+font-weight:normal;
+}
+ 
+.a {
+margin-top:13px;
+}
+ 
+/*chat*/
+ 
+.chat ol {
+padding:0;
+list-style:none;
+}
+ 
+.line {
+padding:0px 0;
+}
+ 
+.label {
+font-weight:bold;
+}
+ 
+/*permalink and notes*/
+ 
+#permalink {
+font-size:11px;
+text-align:left;
+margin-top:6px;
+text-transform:lowercase;
+}
+ 
+#permalink a {
+margin-right:0px;
+}
+ 
+.tags {
+font-size:11px;
+text-transform:lowercase;
+}
+
+.tags:hover {
+letter-spacing:2px;
+}
+ 
+.pagenotes {
+{block:IndexPage}
+display: none!important;
+{/block:IndexPage}
+width:500px;
+text-align:left;
+}
+ 
+.pagenotes img {
+display:none!important;
+}
+ 
+.pagenotes li {
+list-style-type:none;
+padding:2px 0px;
+text-align:left;
+margin:0 0 0 -40px;
+}
+ 
+{CustomCSS}
+ 
+</style>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src ="//static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:100,
+tip_fade_speed:700,
+attribute:"title"
+}); });
+})(jQuery);
+</script>
+ 
+</head>
+ 
+<body>
+<div id="tab">
+<div id="tabtitle">{text:tabtitle}</div>
+<div id="tabinfo">{text:updates}</div>
+</div>
+
+
+<div id="con">
+
+
+<div id="sidebar">
+
+<div class="title"><a title="home" href="/">{Title}</a>
+
+
+{block:ifsidebar}
+<div id="sidebar img">
+<a title="home" href="/">
+<img src="{image:sidebar}"></a>
+</div>
+{/block:ifsidebar}
+
+    
+</div>
+ 
+<div id="description">{Description}</div>
+ 
+<div id="links">
+{block:iflink1}<a href="{text:link 1 URL}" class="class2" title="{text:link 1 hover}">{text:link 1}</a>{/block:iflink1}&nbsp;&nbsp;
+{block:iflink2}<a href="{text:link 2 URL}" class="class2" title="{text:link 2 hover}">{text:link 2}</a>{/block:iflink2}&nbsp;&nbsp;
+{block:iflink3}<a href="{text:link 3 URL}" class="class2" title="{text:link 3 hover}">{text:link 3}</a>{/block:iflink3}&nbsp;&nbsp;
+{block:iflink4}<a href="{text:link 4 URL}" class="class2" title="{text:link 4 hover}">{text:link 4}</a>{/block:iflink4}&nbsp;&nbsp;
+{block:iflink5}<a href="{text:link 5 URL}" class="class2" title="{text:link 5 hover}">{text:link 5}</a>{/block:iflink5}
+
+
+</div>
+<div id="pagination">
+{block:Pagination}
+{block:PreviousPage}
+<a title="prev" href="{PreviousPage}"><<</a>
+{/block:PreviousPage}
+ 
+{block:NextPage}
+<a title="next" href="{NextPage}">>></a>
+{/block:NextPage}
+{/block:Pagination}
+</div>
+</div>
+
+
+
+<div id="entries">
+
+{block:Posts}
+
+ <div id="posts">
+ 
+{block:Quote}
+<div id="titlequote"><i class="fa fa-quote-left"></i>&nbsp; {Quote} &nbsp;<i class="fa fa-quote-right"></i></div>
+{block:Source}<div id="source">&mdash; {Source}</div>{/block:Source}
+{/block:Quote}
+ 
+{block:Text}
+{block:Title}
+<div id="title">{Title}</div>{/block:Title}
+{Body}
+{/block:Text}
+ 
+{block:link}
+<div id="title"><a href="{URL}"><i class="fa fa-link"></i>&nbsp; {Name}</a></div>
+{block:Description}{Description}{/block:Description}
+{/block:link}
+ 
+{block:Chat}
+{block:Title}
+<div id="title">{Title}</div>{/block:Title}
+{/block:Text}
+{block:lines}
+{block:label}
+<br><b>{label}</b>
+{/block:label}
+{line}
+{/block:lines}
+{/block:Chat}
+ 
+{block:Photo}
+{linkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{linkCloseTag}
+{/block:Photo}
+ 
+{block:Photoset}
+{Photoset-500}
+{/block:Photoset}
+ 
+<div class="video">{Video-500}</div>
+ 
+{block:Audio}
+{block:AudioEmbed}{AudioEmbed-500}{/block:AudioEmbed}
+{/block:Audio}
+ 
+{block:Answer}
+<div class="q">
+<div class="as"> <b><big><i><div style= text-transform:lowercase>{Asker}</i> wondered,</big></b></div>
+{Question}</div></div>
+<div class="a">{Answer}</div>
+{/block:Answer}
+ 
+{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+ 
+<!-- {block:ContentSource} {SourceURL} {/block:ContentSource} {block:RebloggedFrom} {ReblogRootURL} {ReblogParentURL} {/block:RebloggedFrom} -->
+ 
+{block:Date}
+<p>
+<div id="permalink">
+
+
+<a title="date" href="{Permalink}" >{MonthNumberWithZero}.{DayOfMonthWithZero}.{ShortYear}</a>
+
+{block:NoteCount} • <a title="notes" href="{Permalink}">{NoteCount}</a>{/block:NoteCount}
+
+{block:RebloggedFrom} • <a href="{ReblogParentURL}" title="{ReblogParentName}">via</a>{block:ContentSource} •
+
+<a href="{ReblogRootURL}" title="{ReblogRootName}">source</a>{/block:ContentSource}{/block:RebloggedFrom}</div>
+ 
+<div class="tags">{block:Tags}<a href="{TagUrl}">#{Tag}</a>
+&nbsp;&nbsp;{/block:Tags}</div>
+ 
+
+{/block:Date}
+ 
+</div>
+ 
+{block:PostNotes}
+<div class="pagenotes">
+{PostNotes}
+</div>
+{/block:PostNotes}
+ {/block:Posts}
+</div>
+
+
+ 
+</div>
+
+<div style="font-size: 12px; letter-spacing: 2px; float: right; position: fixed; bottom:5px; right:5px; z-index:9999999"><center><a title="theme" href="http://stellur.tumblr.com/">☆</a></div> 
+ 
+</body></html>
