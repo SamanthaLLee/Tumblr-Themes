@@ -1,3 +1,3 @@
-# themes
+# Themes
 
-Just some themes I've coded for Tumblr. 
+Some themes I've coded for Tumblr blogs.
