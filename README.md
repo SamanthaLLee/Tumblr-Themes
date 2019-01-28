@@ -1,3 +1,3 @@
-# Tumblr-Themes
+# Tumblr Themes
 
-Themes created for Tumblr blogs
+Themes for Tumblr blogs
