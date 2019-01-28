@@ -1,0 +1,562 @@
+<!--
+theme by stellur // DO NOT REMOVE CREDIT
+
+WORK IN PROGRESS
+-->
+
+<!DOCTYPE html>
+ 
+<head>
+ 
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<!--Default Variables-->
+ 
+<meta name="color:background" content="#ffffff"/>
+<meta name="color:text" content="#2b2b2b"/>
+<meta name="color:link" content="#2b2b2b"/>
+<meta name="color:link hover" content="#949494"/>
+<meta name="color:blockquote" content="#dadada"/>
+<meta name="color:sidebar" content="#ffffff"/>
+<meta name="color:title" content="#000000"/>
+<meta name="color:description" content="#dadada"/>
+<meta name="color:link1color" content="#dadada"/>
+<meta name="color:link2color" content="#dadada"/>
+<meta name="color:link3color" content="#dadada"/>
+<meta name="color:link4color" content="#dadada"/>
+<meta name="color:link5color" content="#dadada"/>
+
+ 
+<meta name="text:link 1 URL" content="" />
+<meta name="text:link 1" content="" />
+<meta name="text:link 2 URL" content="" />
+<meta name="text:link 2" content="" />
+<meta name="text:link 3 URL" content="" />
+<meta name="text:link 3" content="" />
+<meta name="text:link 4 URL" content="" />
+<meta name="text:link 4" content="" />
+<meta name="text:link 5 URL" content="" />
+<meta name="text:link 5" content="" />
+
+
+
+ 
+<!--CSS customization here. -->
+ 
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+ 
+<style type="text/css">
+ 
+#s-m-t-tooltip{
+position:absolute;
+margin-top: 15px;
+z-index:9999;
+background:{color:background};
+}
+ 
+/*basics*/
+ 
+blockquote {
+padding-left:12px;
+border-left:3px solid {color:blockquote};
+margin-left:8px;
+}
+ 
+ul {
+list-style:none;
+text-align:left;
+padding-left:0;
+}
+ 
+li {
+position:relative;
+padding-left:30px;
+}
+ 
+ul li:before {
+position:absolute;
+left:15px;
+vertical-align:baseline!important;
+content:'›';
+}
+ 
+body {
+background:{color:background};
+color:{color:text};
+font-family:arial;
+font-size:11px;
+margin:0;
+text-align:justify;
+line-height:16px;
+}
+ 
+a {
+color:{color:link};
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+text-decoration:none;
+}
+ 
+a:hover {
+color:{color:link hover};
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+ 
+img {
+opacity:1;
+border:none;
+text-decoration:none;
+}
+ 
+small {
+font-size:11px;
+}
+ 
+big {
+font-size:11px;
+}
+ 
+#title {font-size:12px;
+line-height:18px;
+margin-bottom:10px;
+font-weight:bold;
+text-transform:none;
+text-align:left;
+}
+ 
+/*sidebar*/
+ 
+#sidebar {
+text-align:left;
+position:fixed;
+background-color:{color:background};
+margin-left:-475px; /*-495*/
+margin-top:-30px;
+width:400px;
+height:100%;
+}
+ 
+#sidebar .title {
+position:fixed;
+margin-top:80px;
+margin-left:23px;
+color:{color:title};
+text-align: center;
+letter-spacing: 2px;
+font-size:15px;
+font-weight: bold italic;
+padding:0px 0px 0px 0px;
+
+}
+
+#descriptionbox {
+background-color:{color:background};
+height:60px;
+width:280px;
+margin-top:110px;
+margin-left:100px;
+z-index:999;
+}
+ 
+#description {
+margin-top:10px;
+text-align:left;
+z-index:9999;
+padding:10px 5px 5px 5px;
+}
+
+#line {
+position:fixed;
+height:5px;
+width:360px;
+margin-top: 100px;
+margin-left:20px;
+padding: 10px 0px 0px 0px;
+background-color:{color:description};
+overflow:hidden;
+-webkit-transition:0.5s;
+-moz-transition:0.5s;
+-o-transition:0.5s;
+z-index:999999999999;
+}
+
+
+#link1 {
+position:fixed;
+height:50px;
+width:15px;
+margin-top: 100px;
+margin-left: 20px;
+background-color:{color:link1color};
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+
+#link1:hover {
+height:100px;
+z-index:0;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+
+#link2 {
+position:fixed;
+height:55px;
+width:15px;
+margin-top: 100px;
+margin-left:35px;
+background-color:{color:link2color};
+-webkit-transition:0.5s;
+-moz-transition:0.5s;
+-o-transition:0.5s;
+}
+
+#link2:hover {
+height:100px;
+z-index:0;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link3 {
+position:fixed;
+height:60px;
+width:15px;
+margin-top: 100px;
+margin-left:50px;
+background-color:{color:link3color};
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link3:hover {
+height:100px;
+z-index:0;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link4 {
+position:fixed;
+height:65px;
+width:15px;
+margin-top: 100px;
+margin-left:65px;
+background-color:{color:link4color};
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link4:hover {
+height:100px;
+z-index:0;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link5 {
+position:fixed;
+height:70px;
+width:15px;
+margin-top: 100px;
+margin-left:80px;
+background-color:{color:link5color};
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#link5:hover {
+height:100px;
+z-index:0;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+ 
+/*pagination*/
+ 
+#pagination {
+text-transform:lowercase;
+text-align:center;
+font-size:13px;
+margin-bottom:120px;
+}
+ 
+#pagination a {
+padding:0 3px;
+}
+ 
+/*container*/
+ 
+#con {
+left:50%;
+margin-left:-130px;
+position:absolute;
+}
+ 
+/*posts*/
+ 
+#entries {
+margin-top:95px;
+width:500px;
+}
+ 
+#posts {
+width:500px;
+{block:IndexPage}
+margin-bottom:80px;
+{/block:IndexPage}
+{block:PermalinkPage}
+margin-bottom:50px;
+{/block:PermalinkPage}
+}
+ 
+#posts img {
+max-width:500px;
+}
+ 
+#posts img, #posts li, #posts blockquote {
+max-width: 100%;
+}
+ 
+.caption {
+width:100%;
+margin-top:13px;
+margin-bottom:12px;
+}
+ 
+a.tumblr_blog {
+font-weight:bold;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+ 
+/*quote*/
+ 
+#titlequote {
+text-align:left;
+font-size:12px;
+line-height:17px;
+font-weight:bold;
+}
+ 
+#source {
+margin-top:0px;
+margin-bottom:11px;
+margin-left:0px;
+}
+ 
+/*asks*/
+ 
+.q {
+line-height:17px;
+font-size:11px;
+}
+ 
+.as {
+font-weight:normal;
+}
+ 
+.a {
+margin-top:13px;
+}
+ 
+/*chat*/
+ 
+.chat ol {
+padding:0;
+list-style:none;
+}
+ 
+.line {
+padding:0px 0;
+}
+ 
+.label {
+font-weight:bold;
+}
+ 
+/*permalink and notes*/
+ 
+#permalink {
+font-size:11px;
+text-align:left;
+margin-top:6px;
+text-transform:lowercase;
+}
+ 
+#permalink a {
+margin-right:0px;
+}
+ 
+.tags {
+font-size:11px;
+text-transform:none;
+}
+ 
+.pagenotes {
+{block:IndexPage}
+display: none!important;
+{/block:IndexPage}
+width:500px;
+text-align:left;
+}
+ 
+.pagenotes img {
+display:none!important;
+}
+ 
+.pagenotes li {
+list-style-type:none;
+padding:2px 0px;
+text-align:left;
+margin:0 0 0 -40px;
+}
+ 
+{CustomCSS}
+ 
+</style>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src ="//static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js"></script>
+ 
+</head>
+ 
+<body>
+ 
+<div id="con">
+ 
+<div id="sidebar">
+
+<div class="title"><a href="/">{Title}</div></a>
+
+<div id="line"></div>
+
+<a href="{text:link 1 URL}"><div id="link1"></div></a>
+<a href="{text:link 2 URL}"><div id="link2"></div></a>
+<a href="{text:link 3 URL}"><div id="link3"></div></a>
+<a href="{text:link 4 URL}"><div id="link4"></div></a>
+<a href="{text:link 5 URL}"><div id="link5"></div></a>
+
+<div id="descriptionbox"><div id="description">{Description} </div></div>
+
+
+</div>
+ 
+<div id="entries">
+ 
+{block:Posts}
+ 
+<div id="posts">
+ 
+{block:Quote}
+<div id="titlequote"><i class="fa fa-quote-left"></i>&nbsp; {Quote} &nbsp;<i class="fa fa-quote-right"></i></div>
+{block:Source}<div id="source">&mdash; {Source}</div>{/block:Source}
+{/block:Quote}
+ 
+{block:Text}
+{block:Title}
+<div id="title">{Title}</div>{/block:Title}
+{Body}
+{/block:Text}
+ 
+{block:link}
+<div id="title"><a href="{URL}"><i class="fa fa-link"></i>&nbsp; {Name}</a></div>
+{block:Description}{Description}{/block:Description}
+{/block:link}
+ 
+{block:Chat}
+{block:Title}
+<div id="title">{Title}</div>{/block:Title}
+{/block:Text}
+{block:lines}
+{block:label}
+<br><b>{label}</b>
+{/block:label}
+{line}
+{/block:lines}
+{/block:Chat}
+ 
+{block:Photo}
+{linkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{linkCloseTag}
+{/block:Photo}
+ 
+{block:Photoset}
+{Photoset-500}
+{/block:Photoset}
+ 
+<div class="video">{Video-500}</div>
+ 
+{block:Audio}
+{block:AudioEmbed}{AudioEmbed-500}{/block:AudioEmbed}
+{/block:Audio}
+ 
+{block:Answer}
+<div class="q">
+<div class="as"> <b><big>{Asker} said:</big></b>
+{Question}</div></div>
+<div class="a">{Answer}</div>
+{/block:Answer}
+ 
+{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+ 
+<!-- {block:ContentSource} {SourceURL} {/block:ContentSource} {block:RebloggedFrom} {ReblogRootURL} {ReblogParentURL} {/block:RebloggedFrom} -->
+ 
+{block:Date}
+<div id="permalink">
+<a href="{Permalink}" ><b>{ShortMonth} {DayOfMonthWithSuffix}</b></a>
+{block:NoteCount} with <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}<div style="float:right;">{block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}">via</a>{block:ContentSource} <a href="{ReblogRootURL}" title="{ReblogRootName}">source</a>{/block:ContentSource}{/block:RebloggedFrom}</div>
+ 
+{block:HasTags}<div class="tags">{block:Tags}<a href="{TagUrl}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}</div>{/block:HasTags}
+ 
+</div>
+ 
+{/block:Date}
+ 
+</div>
+ 
+{block:PostNotes}
+<div class="pagenotes">
+{PostNotes}
+</div>
+{/block:PostNotes}
+ 
+{/block:Posts}
+ 
+<div id="pagination">
+{block:Pagination}
+{block:PreviousPage}
+<a href="{PreviousPage}">previous page</a>
+{/block:PreviousPage}
+ 
+ 
+{block:NextPage}
+<a href="{NextPage}">next page</a>
+{/block:NextPage}
+{/block:Pagination}
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</body></html>
